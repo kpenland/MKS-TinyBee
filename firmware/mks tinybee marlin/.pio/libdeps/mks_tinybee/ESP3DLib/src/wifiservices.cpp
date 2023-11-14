@@ -37,9 +37,6 @@
 #ifdef HTTP_FEATURE
 #include "web_server.h"
 #endif //HTTP_FEATURE
-#ifdef TCP_SOCKET_FEATURE
-#include "tcp_server.h"
-#endif
 
 WiFiServices wifi_services;
 
@@ -132,10 +129,6 @@ bool WiFiServices::begin()
 #ifdef HTTP_FEATURE
     web_server.begin();
 #endif //HTTP_FEATURE
-
-#ifdef TCP_SOCKET_FEATURE
-    tcp_server.begin();
-#endif
     _started = true;
     return no_error;
 }
@@ -145,11 +138,6 @@ void WiFiServices::end()
 #ifdef HTTP_FEATURE
     web_server.end();
 #endif
-
-#ifdef TCP_SOCKET_FEATURE
-    tcp_server.end();
-#endif
-
     //stop OTA
 #ifdef OTA_FEATURE
     ArduinoOTA.end();
@@ -171,9 +159,6 @@ void WiFiServices::handle()
 #ifdef HTTP_FEATURE
     web_server.handle();
 #endif //HTTP_FEATURE
-#ifdef TCP_SOCKET_FEATURE
-    tcp_server.handle();
-#endif
 }
 
 #endif // ENABLE_WIFI

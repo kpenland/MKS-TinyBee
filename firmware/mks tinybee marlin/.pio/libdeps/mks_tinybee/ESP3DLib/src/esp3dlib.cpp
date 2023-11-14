@@ -42,8 +42,6 @@ void ESP3DLibTaskfn( void * parameter )
 {
     Esp3DLibConfig::wait(DELAY_START_ESP3D);  // Yield to other tasks
     WiFiConfig::begin();
-
-    
     for(;;) {
         WiFiConfig::handle();
         Esp3DLibConfig::wait(0);  // Yield to other tasks

@@ -1238,7 +1238,7 @@ void Web_Server::WebUpdateUpload ()
 
 //direct SD files list//////////////////////////////////////////////////
 void Web_Server::handle_direct_SDFileList()
-{   
+{
     sd_busy_lock = true;
     //this is only for admin an user
     if (is_authenticated() == LEVEL_GUEST) {
@@ -1412,7 +1412,7 @@ void Web_Server::handle_direct_SDFileList()
 
 //SD File upload with direct access to SD///////////////////////////////
 void Web_Server::SDFile_direct_upload()
-{   
+{
     sd_busy_lock = true;
 
     static ESP_SD sdfile;
@@ -1532,9 +1532,7 @@ void Web_Server::handle()
     }
 #endif //CAPTIVE_PORTAL_FEATURE
     if (_webserver) {
-        disableCore0WDT();
         _webserver->handleClient();
-        enableCore0WDT();
     }
     if (_socket_server && _setupdone) {
         Serial2Socket.handle_flush();

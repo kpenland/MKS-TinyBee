@@ -1,0 +1,46 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "PlatformIO",
+			"task": "Build (mks_tinybee)",
+			"problemMatcher": [
+				"$platformio"
+			],
+			"group": "build",
+			"label": "PlatformIO: Build (mks_tinybee)"
+		},
+		{
+			"type": "PlatformIO",
+			"task": "List (mks_tinybee)",
+			"problemMatcher": [
+				"$platformio"
+			],
+			"label": "PlatformIO: List (mks_tinybee)"
+		},
+		{
+			"type": "PlatformIO",
+			"task": "Monitor (mks_tinybee)",
+			"problemMatcher": [
+				"$platformio"
+			],
+			"label": "PlatformIO: Monitor (mks_tinybee)"
+		},
+		{
+			"type": "PlatformIO",
+			"task": "Outdated (mks_tinybee)",
+			"problemMatcher": [
+				"$platformio"
+			],
+			"label": "PlatformIO: Outdated (mks_tinybee)"
+		},
+		{
+			"type": "PlatformIO",
+			"task": "Upload and Monitor (mks_tinybee)",
+			"problemMatcher": [
+				"$platformio"
+			],
+			"label": "PlatformIO: Upload and Monitor (mks_tinybee)"
+		}
+	]
+}
